@@ -1,0 +1,393 @@
+
+@keyframes cloop 
+
+{
+
+    0%  {color: cyan;}
+    70% {color: azure;}
+
+}
+
+@keyframes transition
+
+{
+
+    from {opacity: 0;}
+    to   {opacity: 100%;}
+
+}
+
+.loginpopup
+
+{
+
+    background-color:black;
+    border: 4px dotted violet;
+    position: absolute;
+    padding: calc(100% - 98%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: max-content;
+    height: max-content;
+    opacity: 0%;
+    display: none;
+    z-index: 5;
+
+}
+
+.signuppopup
+
+{
+
+    background-color:black;
+    border: 4px dotted violet;
+    position: absolute;
+    padding: calc(100% - 98%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    height: max-content;
+    opacity: 0%;
+    z-index: 5;
+
+}
+
+.loginpopup:target,.signuppopup:target
+
+{
+
+    animation: transition 2s forwards;
+    display: block;
+
+}
+
+
+.popclose
+
+{
+
+    padding: 2vw;
+    display: flex;
+    color: cyan;
+    font-size: 2.5rem;
+    left: 0;
+    top: -50%;
+    font-family: "press Start 2P";
+
+    
+}
+
+a.popclose
+
+{
+
+    display: flex;
+    margin-left:-5%;
+    margin-top: -5%;
+
+}
+
+.popclose:hover
+
+{
+
+    background-color:blueviolet;
+
+}
+
+
+h6
+
+{
+
+    display: inline;
+    font-size: 1vw;
+    color: cyan;
+    font-size: 3rem;
+    animation: cloop 3s alternate infinite;
+    font-family: "press Start 2P";
+    margin: 0;
+
+}
+
+#username
+
+{
+
+    color:red;
+    font-size: 1.8vw;
+    font-family: arial;
+    font-weight: bold;
+
+}
+
+#password
+
+{
+
+    color: red;
+    font-size: 1.8vw;
+    font-family: arial;
+    font-weight: bold;
+
+}
+
+#email
+
+{
+
+    color:red;
+    font-size: 1.8vw;
+    font-family: arial;
+    font-weight: bold;
+
+}
+
+.usernamebox,.passwordbox,.emailbox
+
+{
+
+    border: 2px dotted violet;
+    background-color: rgb(112, 112, 112);
+    margin-left: 2rem;
+    width: 25rem;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+
+}
+
+
+
+.usernamebox:focus,.passwordbox:focus,.emailbox:focus
+
+{
+
+    border: red dotted 2.5px;
+    outline:none;
+    background-color: lightcoral;
+    color: red;
+}
+
+.usernamebox:hover,.passwordbox:hover,.emailbox:hover
+
+{
+
+    background-color: lightcoral;
+
+}
+
+.usernamebox::placeholder,.passwordbox::placeholder,.emailbox::placeholder
+
+{
+
+    color: cyan;
+    font-size: 1rem;
+    padding-left: 10px;
+
+}
+
+.usernamebox:focus,.passwordbox:focus,.emailbox:focus
+
+{
+
+    font-size: 1.5rem;
+
+}
+
+.loginbutton
+
+{
+
+    background-color: black;
+    color: cyan;
+    border: 2px dotted rebeccapurple;
+    font-size: 1.2rem;
+    width: 8rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: "press Start 2P";
+
+}
+
+.loginbutton:hover
+
+{
+
+    background-color: lightcoral;
+    cursor: pointer;
+
+}
+
+.loginbutton:active
+
+{
+
+    color: red;
+    background: cyan;
+    border: 2px solid red;
+
+}
+
+.signupbutton
+
+{
+
+    background-color: black;
+    color: cyan;
+    border: 2px dotted rebeccapurple;
+    font-size: 1.2rem;
+    width: 10.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: "press Start 2P";
+
+}
+
+.signupbutton:hover
+
+{
+
+    background-color: lightcoral;
+    cursor: pointer;
+
+}
+
+.signupbutton:active
+
+{
+
+    color: red;
+    background: cyan;
+    border: 2px solid red;
+
+}
+
+.signupalt,.loginalt
+
+{
+
+    color: aquamarine;
+    border: 1px cyan dotted;
+    padding: 1.5%;
+
+}
+
+
+
+a.signupalt,a.loginalt
+
+{
+
+    font-size: 1rem;
+    margin-left: 4%;
+
+}
+
+#tip1
+
+{
+
+    color: aquamarine;
+    font-size: 1rem;
+    font-family: "press Start 2P";
+    margin-top: 2rem;
+    margin-bottom: 0;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+@media only screen and (max-width:720px)
+
+{
+
+    #tip1
+
+    {
+
+        font-size: 3vw;
+        
+    }
+
+    a.signupalt,a.loginalt
+
+{
+
+    font-size: 3vw;
+    width: 25vw;
+    margin-left: 10%;
+
+}
+
+    a.popclose 
+
+    {
+
+        font-size: 6vw;
+        display: inline;
+        margin-right: 3%;
+        margin-left:0; 
+        color: red;
+
+    }
+
+ 
+
+    form
+
+    {
+
+        height: -webkit-fill-available;
+
+    }
+
+    .usernamebox,.passwordbox,.emailbox
+
+{
+
+
+
+    margin-left: 2rem;
+    width: -webkit-fill-available;
+    height: 7vw;
+    margin-bottom: 1.5rem;
+    margin-right: -6%;
+    border-color: red;
+
+}
+
+.usernamebox::placeholder,.passwordbox::placeholder,.emailbox::placeholder
+
+{
+
+    font-size:2.7vw;
+
+}
+
+#username,#email,#password
+
+{
+
+    font-size: 4vw;
+
+}
+
+h6 
+
+{
+
+    font-size: 5vw;
+
+}
+
+
+}
